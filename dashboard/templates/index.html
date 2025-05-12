@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cybersecurity Dashboard</title>
+    <style>
+        body { font-family: Arial; padding: 20px; background: #f4f4f4; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 12px; border: 1px solid #ccc; }
+        th { background-color: #333; color: white; }
+    </style>
+</head>
+<body>
+    <h2>Real-Time Threat Detection Logs</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Features</th>
+                <th>Prediction</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for log in logs %}
+            <tr>
+                <td>{{ log.features }}</td>
+                <td>{{ log.prediction }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
